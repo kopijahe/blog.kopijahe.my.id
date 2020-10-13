@@ -5,7 +5,20 @@
     <link>https://blog.kopijahe.my.id/posts/</link>
     <description>Recent content in Posts on Blog KopiJahe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Oct 2020 21:03:07 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Oct 2020 13:47:52 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solusi Kecepatan Upload Sangat Kecil / Tidak Semestinya di OpenWrt</title>
+      <link>https://blog.kopijahe.my.id/posts/openwrt-fragmentation-threshold/</link>
+      <pubDate>Tue, 13 Oct 2020 13:47:52 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/openwrt-fragmentation-threshold/</guid>
+      <description>Router OpenWrt anda sudah terkoneksi dengan jaringan @wifi.id/WMS, tapi kecepatan upload ketika dites sangat kecil?
+Contoh:
+Kemungkinan besar solusinya adalah: set fragmentation threshold interface wifi ke 2346. Langkah-langkah detilnya bisa disimak di bawah:
+Langkah-langkah   Koneksikan perangkat (PC/laptop) ke router (biasanya 192.168.1.1)   Masuk ke tab Network -&amp;gt; Wireless
+  Tekan Edit di bagian wifi yang mau dirubah fragmentation threshold-nya   Masuk ke tab Advanced Settings, lalu scroll ke bagian Fragmentation Threshold</description>
+    </item>
+    
     <item>
       <title>Tutorial Koneksi OpenWrt ke Jaringan @wifi.id via Terminal/SSH</title>
       <link>https://blog.kopijahe.my.id/posts/tutorial-openwrt-ssh/</link>
