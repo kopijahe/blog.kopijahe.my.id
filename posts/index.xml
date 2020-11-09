@@ -5,7 +5,20 @@
     <link>https://blog.kopijahe.my.id/posts/</link>
     <description>Recent content in Posts on Blog KopiJahe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Oct 2020 13:47:52 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 23:06:07 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial Update Script Autologin</title>
+      <link>https://blog.kopijahe.my.id/posts/tutorial-update-script/</link>
+      <pubDate>Mon, 09 Nov 2020 23:06:07 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/tutorial-update-script/</guid>
+      <description>Mengalami permasalahan di script autologin? Silahkan coba untuk update script-nya terlebih dahulu&amp;hellip;
+Berikut langkah-langkahnya:
+  Buka PuTTY, koneksikan perangkat (PC/laptop) ke router melalui SSH (biasanya 192.168.1.1)
+  Ketikkan perintah berikut, sesuaikan dengan script yang anda gunakan:
+     Varian Script Perintah     autologin curl https://raw.githubusercontent.com/kopijahe/wifiid-openwrt/master/scripts/autologin.sh -o /etc/autologin.sh &amp;amp;&amp;amp; chmod +x /etc/autologin.sh   autologin-firefox curl https://raw.githubusercontent.com/kopijahe/wifiid-openwrt/master/scripts/autologin-firefox.sh -o /etc/autologin.sh &amp;amp;&amp;amp; chmod +x /etc/autologin.sh   autologin-google curl https://raw.</description>
+    </item>
+    
     <item>
       <title>Solusi Kecepatan Upload Sangat Kecil / Tidak Semestinya di OpenWrt</title>
       <link>https://blog.kopijahe.my.id/posts/openwrt-fragmentation-threshold/</link>
