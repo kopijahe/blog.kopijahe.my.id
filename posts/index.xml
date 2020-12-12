@@ -5,7 +5,40 @@
     <link>https://blog.kopijahe.my.id/posts/</link>
     <description>Recent content in Posts on Blog KopiJahe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 Nov 2020 23:06:07 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Dec 2020 18:28:01 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial Multi Autologin Kopijahe</title>
+      <link>https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/</link>
+      <pubDate>Sat, 12 Dec 2020 18:28:01 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/</guid>
+      <description>Setelah sebelumnya sudah memasang aplikasi autologin dan load-balancing 2 koneksi, pada artikel kali ini, saya akan memberikan langkah-langkah agar aplikasi autologin bisa berjalan di kedua koneksi (misal load-balancing 2 koneksi @wifi.id)
+Langkah-langkah:   Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)
+  Jika mengikuti tutorial sebelumnya, berarti aplikasi autologin untuk koneksi pertama harus dirubah agar tetap berjalan dengan baik, dengan mengetikkan perintah
+  kopijahe -m 1 -l &amp;quot;yes&amp;quot;  Lalu konfirmasi interface yang digunakan untuk koneksi pertama (misalnya wwan)</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Load-balancing Sederhana di OpenWrt</title>
+      <link>https://blog.kopijahe.my.id/posts/openwrt-mwan3/</link>
+      <pubDate>Fri, 11 Dec 2020 20:51:58 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/openwrt-mwan3/</guid>
+      <description>Pada artikel ini, saya akan coba menjelaskan langkah-langkah yang diperlukan untuk load-balancing sederhana 2 koneksi di OpenWrt. Sebagai contoh, saya gunakan 2 koneksi ke jaringan @wifi.id.
+ ⚠️ Penggunaan 2 atau lebih koneksi bisa menyebabkan koneksi tidak stabil, terutama untuk game online, diperlukan pengaturan load-balance lebih lanjut untuk membagi koneksi agar stabil. Pada artikel ini, saya tidak membahas masalah pisah jalur/traffic koneksi, hanya murni load-balance saja.
+Selama pengaturan load-balance berjalan, koneksi ke internet kemungkinan besar akan terputus.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Penggunaan Aplikasi Autologin</title>
+      <link>https://blog.kopijahe.my.id/posts/autologin-kopijahe/</link>
+      <pubDate>Thu, 10 Dec 2020 10:41:55 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/autologin-kopijahe/</guid>
+      <description>Pada kesempatan kali ini, saya merilis aplikasi untuk keperluan login otomatis di jaringan @wifi.id dan wms dan turunannya dengan berbagai fitur:
+[*] Deteksi otomatis halaman login wifi.id yang digunakan [*] Deteksi gagalnya login yang lebih baik [*] Dukungan deteksi captive portal/halaman landing yang lebih baik [*] Dukungan penyedia layanan cek captive portal yang lebih banyak [*] Dukungan multi-autologin atau load-balance yang lebih mudah Persyaratan:  Router berbasis OpenWrt/LEDE minimal versi rilis 17.</description>
+    </item>
+    
     <item>
       <title>Tutorial Update Script Autologin</title>
       <link>https://blog.kopijahe.my.id/posts/tutorial-update-script/</link>
