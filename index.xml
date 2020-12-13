@@ -7,26 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 12 Dec 2020 18:28:01 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tutorial Multi Autologin Kopijahe</title>
-      <link>https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/</link>
-      <pubDate>Sat, 12 Dec 2020 18:28:01 +0700</pubDate>
+      <title>Tutorial untuk menangkap/menembak dan memancarkan kembali sinyal @wifi.id menggunakan router berbasis OpenWrt dan Pharos</title>
+      <link>https://blog.kopijahe.my.id/posts/tutorial-wifiid/</link>
+      <pubDate>Fri, 29 May 2020 09:46:01 +0700</pubDate>
       
-      <guid>https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/</guid>
-      <description>Setelah sebelumnya sudah memasang aplikasi autologin dan load-balancing 2 koneksi, pada artikel kali ini, saya akan memberikan langkah-langkah agar aplikasi autologin bisa berjalan di kedua koneksi (misal load-balancing 2 koneksi @wifi.id)
-Langkah-langkah:   Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)
-  Jika mengikuti tutorial sebelumnya, berarti aplikasi autologin untuk koneksi pertama harus dirubah agar tetap berjalan dengan baik, dengan mengetikkan perintah
-  kopijahe -m 1 -l &amp;quot;yes&amp;quot;  Lalu konfirmasi interface yang digunakan untuk koneksi pertama (misalnya wwan)</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Load-balancing Sederhana di OpenWrt</title>
-      <link>https://blog.kopijahe.my.id/posts/openwrt-mwan3/</link>
-      <pubDate>Fri, 11 Dec 2020 20:51:58 +0700</pubDate>
-      
-      <guid>https://blog.kopijahe.my.id/posts/openwrt-mwan3/</guid>
-      <description>Pada artikel ini, saya akan coba menjelaskan langkah-langkah yang diperlukan untuk load-balancing sederhana 2 koneksi di OpenWrt. Sebagai contoh, saya gunakan 2 koneksi ke jaringan @wifi.id.
- ⚠️ Penggunaan 2 atau lebih koneksi bisa menyebabkan koneksi tidak stabil, terutama untuk game online, diperlukan pengaturan load-balance lebih lanjut untuk membagi koneksi agar stabil. Pada artikel ini, saya tidak membahas masalah pisah jalur/traffic koneksi, hanya murni load-balance saja.
-Selama pengaturan load-balance berjalan, koneksi ke internet kemungkinan besar akan terputus.</description>
+      <guid>https://blog.kopijahe.my.id/posts/tutorial-wifiid/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -35,8 +21,25 @@ Selama pengaturan load-balance berjalan, koneksi ke internet kemungkinan besar a
       <pubDate>Thu, 10 Dec 2020 10:41:55 +0700</pubDate>
       
       <guid>https://blog.kopijahe.my.id/posts/autologin-kopijahe/</guid>
-      <description>Pada kesempatan kali ini, saya merilis aplikasi untuk keperluan login otomatis di jaringan @wifi.id dan wms dan turunannya dengan berbagai fitur:
-[*] Deteksi otomatis halaman login wifi.id yang digunakan [*] Deteksi gagalnya login yang lebih baik [*] Dukungan deteksi captive portal/halaman landing yang lebih baik [*] Dukungan penyedia layanan cek captive portal yang lebih banyak [*] Dukungan multi-autologin atau load-balance yang lebih mudah Persyaratan:  Router berbasis OpenWrt/LEDE minimal versi rilis 17.</description>
+      <description>&lt;p&gt;Pada kesempatan kali ini, saya merilis aplikasi untuk keperluan login otomatis di jaringan &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;@wifi.id dan wms dan turunannya dengan berbagai fitur&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Multi Autologin Kopijahe</title>
+      <link>https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/</link>
+      <pubDate>Sat, 12 Dec 2020 18:28:01 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/</guid>
+      <description>&lt;p&gt;Setelah sebelumnya sudah &lt;a href=&#34;../autologin-kopijahe/&#34;&gt;memasang aplikasi autologin&lt;/a&gt; dan &lt;a href=&#34;../openwrt-mwan3/&#34;&gt;load-balancing 2 koneksi&lt;/a&gt;, pada artikel kali ini, saya akan memberikan langkah-langkah agar aplikasi autologin bisa berjalan di kedua koneksi (misal load-balancing 2 koneksi &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;@wifi.id)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Load-balancing Sederhana di OpenWrt</title>
+      <link>https://blog.kopijahe.my.id/posts/openwrt-mwan3/</link>
+      <pubDate>Fri, 11 Dec 2020 20:51:58 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/openwrt-mwan3/</guid>
+      <description>&lt;p&gt;Pada artikel ini, saya akan coba menjelaskan langkah-langkah yang diperlukan untuk load-balancing sederhana 2 koneksi di OpenWrt. Sebagai contoh, saya gunakan 2 koneksi ke jaringan &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;@wifi.id.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,11 +48,7 @@ Selama pengaturan load-balance berjalan, koneksi ke internet kemungkinan besar a
       <pubDate>Mon, 09 Nov 2020 23:06:07 +0700</pubDate>
       
       <guid>https://blog.kopijahe.my.id/posts/tutorial-update-script/</guid>
-      <description>Mengalami permasalahan di script autologin? Silahkan coba untuk update script-nya terlebih dahulu&amp;hellip;
-Berikut langkah-langkahnya:
-  Buka PuTTY, koneksikan perangkat (PC/laptop) ke router melalui SSH (biasanya 192.168.1.1)
-  Ketikkan perintah berikut, sesuaikan dengan script yang anda gunakan:
-     Varian Script Perintah     autologin curl https://raw.githubusercontent.com/kopijahe/wifiid-openwrt/master/scripts/autologin.sh -o /etc/autologin.sh &amp;amp;&amp;amp; chmod +x /etc/autologin.sh   autologin-firefox curl https://raw.githubusercontent.com/kopijahe/wifiid-openwrt/master/scripts/autologin-firefox.sh -o /etc/autologin.sh &amp;amp;&amp;amp; chmod +x /etc/autologin.sh   autologin-google curl https://raw.</description>
+      <description>&lt;p&gt;Mengalami permasalahan di script autologin? Silahkan coba untuk update script-nya terlebih dahulu&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,11 +57,7 @@ Berikut langkah-langkahnya:
       <pubDate>Tue, 13 Oct 2020 13:47:52 +0700</pubDate>
       
       <guid>https://blog.kopijahe.my.id/posts/openwrt-fragmentation-threshold/</guid>
-      <description>Router OpenWrt anda sudah terkoneksi dengan jaringan @wifi.id/WMS, tapi kecepatan upload ketika dites sangat kecil?
-Contoh:
-Kemungkinan besar solusinya adalah: set fragmentation threshold interface wifi ke 2346. Langkah-langkah detilnya bisa disimak di bawah:
-Langkah-langkah   Koneksikan perangkat (PC/laptop) ke router (biasanya 192.168.1.1)   Masuk ke tab Network -&amp;gt; Wireless
-  Tekan Edit di bagian wifi yang mau dirubah fragmentation threshold-nya   Masuk ke tab Advanced Settings, lalu scroll ke bagian Fragmentation Threshold</description>
+      <description>&lt;p&gt;Router OpenWrt anda sudah terkoneksi dengan jaringan &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;@wifi.id/WMS, tapi kecepatan upload ketika dites sangat kecil?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,17 +66,7 @@ Langkah-langkah   Koneksikan perangkat (PC/laptop) ke router (biasanya 192.168.1
       <pubDate>Tue, 06 Oct 2020 21:03:07 +0700</pubDate>
       
       <guid>https://blog.kopijahe.my.id/posts/tutorial-openwrt-ssh/</guid>
-      <description>Jika perangkat anda masih terlalu baru, sehingga belum mendapatkan rilis stabil openwrt yang sudah termasuk tampilan web (luci), dan di rumah masih belum ada koneksi internet lewat jaringan LAN untuk instalasi luci, berikut adalah langkah-langkah yang diperlukan untuk bisa terkoneksi dengan internet melalui terminal/SSH.
-Persyaratan  Router OpenWrt PuTTY (unduh dan pasang dari situs ini)  Langkah-langkah   Buka PuTTY, koneksikan perangkat (PC/laptop) ke router melalui SSH (biasanya 192.168.1.1)</description>
-    </item>
-    
-    <item>
-      <title>Tutorial untuk menangkap/menembak dan memancarkan kembali sinyal @wifi.id menggunakan router berbasis OpenWrt dan Pharos</title>
-      <link>https://blog.kopijahe.my.id/posts/tutorial-wifiid/</link>
-      <pubDate>Fri, 29 May 2020 09:46:01 +0700</pubDate>
-      
-      <guid>https://blog.kopijahe.my.id/posts/tutorial-wifiid/</guid>
-      <description>Persyaratan:  Terjangkau jaringan @wifi.id (nama wifi/SSID: @wifi.id, indischool@wifi.id, wifi.id@home, dan seamless@wifi.id). Untuk mengecek ketersediaan pemancar @wifi.id di daerah sekitar, bisa mengecek di fitur &amp;ldquo;Hotspot Finder&amp;rdquo; yang tersedia di aplikasi wifi.id GO (android, iOS), atau melalui situs resmi @wifi.id: https://wifi.id/maps-wifi Punya router jaringan berbasiskan OpenWrt/LEDE atau TP-Link Pharos Punya akun @wifi.id (beli voucher fisik, atau lewat SMS ke 98108, lewat aplikasi wifi.id GO (android, iOS) atau lewat online marketplace seperti Tokopedia, keterangan lebih lanjut bisa merujuk ke: https://wifi.</description>
+      <description>&lt;p&gt;Jika perangkat anda masih terlalu baru, sehingga belum mendapatkan rilis stabil openwrt yang sudah termasuk tampilan web (&lt;code&gt;luci&lt;/code&gt;), dan di rumah masih belum ada koneksi internet lewat jaringan LAN untuk instalasi &lt;code&gt;luci&lt;/code&gt;, berikut adalah langkah-langkah yang diperlukan untuk bisa terkoneksi dengan internet melalui terminal/SSH.&lt;/p&gt;</description>
     </item>
     
   </channel>
