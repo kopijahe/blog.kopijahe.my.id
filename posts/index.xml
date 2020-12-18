@@ -5,7 +5,7 @@
     <link>https://blog.kopijahe.my.id/posts/</link>
     <description>Recent content in Posts on Blog KopiJahe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 13 Dec 2020 07:25:16 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Dec 2020 08:42:35 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tutorial untuk menangkap/menembak dan memancarkan kembali sinyal @wifi.id menggunakan router berbasis OpenWrt dan Pharos</title>
       <link>https://blog.kopijahe.my.id/posts/tutorial-wifiid/</link>
@@ -22,6 +22,15 @@
       
       <guid>https://blog.kopijahe.my.id/posts/autologin-kopijahe/</guid>
       <description>&lt;p&gt;Pada kesempatan kali ini, saya merilis aplikasi untuk keperluan login otomatis di jaringan &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;@wifi.id dan wms dan turunannya dengan berbagai fitur&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Pembaruan Berkas Autologin</title>
+      <link>https://blog.kopijahe.my.id/posts/update-login-file/</link>
+      <pubDate>Fri, 18 Dec 2020 08:42:35 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/update-login-file/</guid>
+      <description></description>
     </item>
     
     <item>
