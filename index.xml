@@ -25,21 +25,21 @@
     </item>
     
     <item>
-      <title>Tutorial Pembaruan Berkas Autologin</title>
-      <link>https://blog.kopijahe.my.id/posts/update-login-file/</link>
-      <pubDate>Fri, 18 Dec 2020 08:42:35 +0700</pubDate>
-      
-      <guid>https://blog.kopijahe.my.id/posts/update-login-file/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Penggunaan Lebih Lanjut Aplikasi Autologin Kopijahe</title>
       <link>https://blog.kopijahe.my.id/posts/man-autologin-kopijahe/</link>
       <pubDate>Sun, 13 Dec 2020 07:25:16 +0700</pubDate>
       
       <guid>https://blog.kopijahe.my.id/posts/man-autologin-kopijahe/</guid>
       <description>&lt;p&gt;Pada artikel ini, saya akan menjelaskan berbagai fungsi dan parameter yang diperlukan di aplikasi autologin KopiJahe.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Pembaruan Berkas Autologin</title>
+      <link>https://blog.kopijahe.my.id/posts/update-login-file/</link>
+      <pubDate>Fri, 18 Dec 2020 08:42:35 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/update-login-file/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@
     </item>
     
     <item>
-      <title>Tutorial Update Script Autologin</title>
+      <title>Tutorial Update Script Autologin (v1/v2)</title>
       <link>https://blog.kopijahe.my.id/posts/tutorial-update-script/</link>
       <pubDate>Mon, 09 Nov 2020 23:06:07 +0700</pubDate>
       
