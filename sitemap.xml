@@ -1,68 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://blog.kopijahe.my.id/posts/tutorial-wifiid/</loc>
     <lastmod>2020-05-29T09:46:01+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/autologin-kopijahe/</loc>
     <lastmod>2020-12-10T10:41:55+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/man-autologin-kopijahe/</loc>
     <lastmod>2020-12-13T07:25:16+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/</loc>
-    <lastmod>2020-12-18T08:42:35+07:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-12-23T09:52:20+07:00</lastmod>
+  </url><url>
+    <loc>https://blog.kopijahe.my.id/posts/r4a-breed/</loc>
+    <lastmod>2021-12-23T09:52:20+07:00</lastmod>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/</loc>
-    <lastmod>2020-12-18T08:42:35+07:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-12-23T09:52:20+07:00</lastmod>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/update-login-file/</loc>
     <lastmod>2020-12-18T08:42:35+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/</loc>
     <lastmod>2020-12-12T18:28:01+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/openwrt-mwan3/</loc>
     <lastmod>2020-12-11T20:51:58+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/tutorial-update-script/</loc>
     <lastmod>2020-11-09T23:06:07+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/openwrt-fragmentation-threshold/</loc>
     <lastmod>2020-10-13T13:47:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/posts/tutorial-openwrt-ssh/</loc>
     <lastmod>2020-10-06T21:03:07+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.kopijahe.my.id/tags/</loc>
   </url>
-  
 </urlset>

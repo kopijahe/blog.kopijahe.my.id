@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://blog.kopijahe.my.id/sitemap.xml

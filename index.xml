@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog KopiJahe</title>
     <link>https://blog.kopijahe.my.id/</link>
     <description>Recent content on Blog KopiJahe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 18 Dec 2020 08:42:35 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Dec 2021 09:52:20 +0700</lastBuildDate><atom:link href="https://blog.kopijahe.my.id/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tutorial untuk menangkap/menembak dan memancarkan kembali sinyal @wifi.id menggunakan router berbasis OpenWrt dan Pharos</title>
       <link>https://blog.kopijahe.my.id/posts/tutorial-wifiid/</link>
@@ -31,6 +31,15 @@
       
       <guid>https://blog.kopijahe.my.id/posts/man-autologin-kopijahe/</guid>
       <description>&lt;p&gt;Pada artikel ini, saya akan menjelaskan berbagai fungsi dan parameter yang diperlukan di aplikasi autologin KopiJahe.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pengaturan BREED bootloader dan instalasi OpenWrt di Xiaomi 4A Gigabit Edition dan R3G v2</title>
+      <link>https://blog.kopijahe.my.id/posts/r4a-breed/</link>
+      <pubDate>Thu, 23 Dec 2021 09:52:20 +0700</pubDate>
+      
+      <guid>https://blog.kopijahe.my.id/posts/r4a-breed/</guid>
+      <description>&lt;p&gt;Jika membeli router Xiaomi 4A Gigabit Edition ataupun R3G v2 di marketplace yang sudah terpasang OpenWrt 19.07 dan BREED, tapi tidak bisa upgrade ke 21.02, berikut langkah-langkah yang harus dilakukan&lt;/p&gt;</description>
     </item>
     
     <item>
