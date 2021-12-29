@@ -3,9 +3,9 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>Tutorial Mengganti MAC Address pada OpenWrt 21.02 | Blog KopiJahe</title>
+<title>Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02 | Blog KopiJahe</title>
 <meta name=keywords content>
-<meta name=description content="Tutorial Mengganti MAC Address pada OpenWrt 21.02 - Blog KopiJahe">
+<meta name=description content="Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02 - Blog KopiJahe">
 <meta name=author content="KopiJahe">
 <link rel=canonical href=https://blog.kopijahe.my.id/posts/change-openwrt-mac-address/>
 <meta name=google-site-verification content="XYZabc">
@@ -22,17 +22,17 @@
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
 </noscript>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-179524169-1','auto'),ga('send','pageview'))</script><meta property="og:title" content="Tutorial Mengganti MAC Address pada OpenWrt 21.02">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-179524169-1','auto'),ga('send','pageview'))</script><meta property="og:title" content="Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02">
 <meta property="og:description" content>
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.kopijahe.my.id/posts/change-openwrt-mac-address/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2021-12-29T11:42:23+07:00">
 <meta property="article:modified_time" content="2021-12-29T11:42:23+07:00"><meta property="og:site_name" content="KopiJahe">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="Tutorial Mengganti MAC Address pada OpenWrt 21.02">
+<meta name=twitter:title content="Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02">
 <meta name=twitter:description content>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://blog.kopijahe.my.id/posts/"},{"@type":"ListItem","position":3,"name":"Tutorial Mengganti MAC Address pada OpenWrt 21.02","item":"https://blog.kopijahe.my.id/posts/change-openwrt-mac-address/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Tutorial Mengganti MAC Address pada OpenWrt 21.02","name":"Tutorial Mengganti MAC Address pada OpenWrt 21.02","description":"","keywords":[],"articleBody":"Jika ingin mengganti MAC address pada OpenWrt 21.02 ke atas karena kebutuhan tertentu, bisa dengan langkah-langkah berikut:\n  Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)\n  Edit berkas pengaturan wireless dengan perintah berikut:\n  vi /etc/config/wireless  Untuk memulai mode input, tekan tombol i, perhatikan indikator di bagian pojok bawah kiri, akan berubah dari - menjadi I:\n  Tambahkan opsi baris berikut di bagian config wifi-iface:\n  option macaddr ''  ⚠️ Bagian  diganti dengan MAC address yang baru, sesuai format ini: C0:FF:EE:12:34:56\n  Untuk menyimpan perubahan berkas, tekan tombol ESC, diikuti dengan mengetikkan :wq\n  Restart wifi agar menggunakan pengaturan baru dengan perintah berikut:\n  wifi  Hasilnya bisa dilihat di menu Network - Wireless\n  Kirim dukungan donasi melalui:  \n","wordCount":"116","inLanguage":"en","datePublished":"2021-12-29T11:42:23+07:00","dateModified":"2021-12-29T11:42:23+07:00","author":{"@type":"Person","name":"KopiJahe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.kopijahe.my.id/posts/change-openwrt-mac-address/"},"publisher":{"@type":"Organization","name":"Blog KopiJahe","logo":{"@type":"ImageObject","url":"https://blog.kopijahe.my.id/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://blog.kopijahe.my.id/posts/"},{"@type":"ListItem","position":3,"name":"Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02","item":"https://blog.kopijahe.my.id/posts/change-openwrt-mac-address/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02","name":"Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02","description":"","keywords":[],"articleBody":"Jika ingin mengganti MAC address pada OpenWrt 21.02 ke atas karena kebutuhan tertentu, bisa dengan langkah-langkah berikut:\n  Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)\n  Edit berkas pengaturan wireless dengan perintah berikut:\n  vi /etc/config/wireless  Untuk memulai mode input, tekan tombol i, perhatikan indikator di bagian pojok bawah kiri, akan berubah dari - menjadi I:\n  Tambahkan opsi baris berikut di bagian config wifi-iface:\n  option macaddr ''  ⚠️ Bagian  diganti dengan MAC address yang baru, sesuai format ini: C0:FF:EE:12:34:56\n  Untuk menyimpan perubahan berkas, tekan tombol ESC, diikuti dengan mengetikkan :wq\n  Restart wifi agar menggunakan pengaturan baru dengan perintah berikut:\n  wifi  Hasilnya bisa dilihat di menu Network - Wireless\n  Kirim dukungan donasi melalui:  \n","wordCount":"116","inLanguage":"en","datePublished":"2021-12-29T11:42:23+07:00","dateModified":"2021-12-29T11:42:23+07:00","author":{"@type":"Person","name":"KopiJahe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.kopijahe.my.id/posts/change-openwrt-mac-address/"},"publisher":{"@type":"Organization","name":"Blog KopiJahe","logo":{"@type":"ImageObject","url":"https://blog.kopijahe.my.id/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
@@ -53,7 +53,7 @@
 <article class=post-single>
 <header class=post-header>
 <h1 class=post-title>
-Tutorial Mengganti MAC Address pada OpenWrt 21.02
+Tutorial Mengganti Wireless MAC Address pada OpenWrt 21.02
 </h1>
 <div class=post-meta><span title="2021-12-29 11:42:23 +0700 +07">29 December 2021</span>&nbsp;·&nbsp;KopiJahe
 </div>
