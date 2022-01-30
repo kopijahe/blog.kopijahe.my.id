@@ -34,8 +34,8 @@
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://blog.kopijahe.my.id/posts/"},{"@type":"ListItem","position":3,"name":"Penggunaan Lebih Lanjut Aplikasi Autologin Kopijahe","item":"https://blog.kopijahe.my.id/posts/man-autologin-kopijahe/"}]}</script>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Penggunaan Lebih Lanjut Aplikasi Autologin Kopijahe","name":"Penggunaan Lebih Lanjut Aplikasi Autologin Kopijahe","description":"Pada artikel ini, saya akan menjelaskan berbagai fungsi dan parameter yang diperlukan di aplikasi autologin KopiJahe.\n","keywords":[],"articleBody":"Pada artikel ini, saya akan menjelaskan berbagai fungsi dan parameter yang diperlukan di aplikasi autologin KopiJahe.\nSilahkan gunakan daftar isi di atas untuk menuju bagian artikel yang anda inginkan.\n Mode seamless@wifi.id auto-reconnect Untuk mode seamless auto-reconnect, hanya perlu menambahkan parameter -s saja, seperti ini:\nkopijahe -s Contoh tampilan berkas /etc/rc.local:\nsleep 10 \u0026\u0026 kopijahe -s \u0026 exit 0 Jika digunakan untuk load-balance, tetap perlu ditambahkan parameter -m  diikuti -l \"yes\" pada saat pengaturan awal, seperti ini:\nkopijahe -m 1 -l \"yes\" Silahkan tentukan interface yang digunakan (misal: wwan, wwan1): wwan Contoh tampilan berkas /etc/rc.local\n(Misal untuk koneksi 1 seamless + 1 venue WMS):\nsleep 10 \u0026\u0026 kopijahe -m 1 -s \u0026 kopijahe -m 2 \u0026 exit 0 (Misal untuk koneksi 2 seamless):\nsleep 10 \u0026\u0026 kopijahe -m 1 -s \u0026 kopijahe -m 2 -s \u0026 exit 0  Pembaruan aplikasi autologin Untuk memperbarui aplikasi autologin, cukup dengan perintah:\nkopijahe -b  Mode autologin via tangkapan CURL Jika jaringan anda belum didukung secara langsung, atau ingin melanjutkan proses autologin dari script versi sebelumnya, bisa menggunakan parameter -f diikuti dengan nama berkas tangkapan CURL via browser Google Chrome, seperti ini:\nkopijahe -f \"\" Misal:\nkopijahe -f \"/etc/login_file.txt\" Berkas tangkapan CURL bisa dihasilkan dengan cara berikut:\n  Koneksikan router dengan jaringan, buka halaman landing\n  Tekan tombol F12, lalu masuk ke tab Network dan centang Preserve log\n  Lakukan login seperti biasa, lalu cari baris check_login.php atau quarantine.php (misal untuk jaringan @wifi.id, wms dan turunannya, sesuaikan dengan jaringan anda)\n  Klik kanan barisnya, lalu pilih Copy - Copy as cURL (bash)\n  Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)\n  Ketikkan perintah berikut untuk membuat berkas baru yang akan digunakan untuk proses autologin:\n  vi Misal:\nvi /etc/login_file.txt  Untuk memulai mode input, tekan tombol i, perhatikan indikator di bagian pojok bawah kiri, akan berubah dari - menjadi I:\n  Paste hasil dari no. 4 dengan menggunakan klik kanan:\n  Hapus baris --compressed dan akhiran  \\ di berkas\n  Untuk menyimpan perubahan berkas, tekan tombol ESC, diikuti dengan mengetikkan :wq\n  Contoh tampilan berkas /etc/rc.local\n(misal untuk 1 koneksi dengan file)\nsleep 10 \u0026\u0026 kopijahe -f \"/etc/file_login.txt\" \u0026 exit 0 (misal untuk 2 koneksi dengan file)\nsleep 10 \u0026\u0026 kopijahe -f \"/etc/file_login.txt\" \u0026 kopijahe -f \"/etc/file_login2.txt\" \u0026 exit 0 (misal untuk 1 @wifi.id + 1 koneksi dengan file)\nsleep 10 \u0026\u0026 kopijahe -m 1 \u0026 kopijahe -f \"/etc/file_login.txt\" \u0026 exit 0 (misal untuk 1 seamless + 1 koneksi dengan file)\nsleep 10 \u0026\u0026 kopijahe -m 1 -s \u0026 kopijahe -f \"/etc/file_login.txt\" \u0026 exit 0  Ganti Penyedia Layanan Cek Captive Portal Untuk mengganti penyedia layanan cek captive portal, bisa menggunakan perintah berikut:\nkopijahe -c \"\" Atau jika digunakan untuk load-balance (diulangi sesuai dengan kebutuhan):\nkopijahe -m -c \"\" Layanan yang didukung saat ini:\nkopijahe: bawaan script firefox: bawaan browser Mozilla Firefox google: bawaan android microsoft: bawaan sistem operasi Windows apple: bawaan perangkat Apple Misal:\nkopijahe -c \"firefox\" Atau jika digunakan untuk load-balance:\nkopijahe -m 1 -c \"firefox\" kopijahe -m 2 -c \"google\"  ⚠️ Jika tidak disertakan pada saat pengaturan awal script, maka dianggap akan menggunakan penyedia layanan cek captive portal dari kopijahe.\n  Pengaturan autologin menggunakan URL landing Jika deteksi otomatis halaman landing tidak berhasil di jaringan @wifi.id atau wms di daerah anda, anda bisa memasukkan secara manual URL halaman landing secara manual dengan menggunakan parameter -d\nSeperti ini:\nkopijahe -d Script akan menanyakan URL halaman landing yang akan digunakan:\nSilahkan paste URL dengan menggunakan klik kanan, lalu tekan enter:\n Pengaturan manual autologin Anda juga bisa memasukkan secara manual pengaturan yang diperlukan di berkas /etc/config/kopijahe\nBerikut adalah kerangka dasar pengaturan di berkas tersebut:\nconfig autologin option multi_autologin '' option loadbalance '' option waninterface '' option username '' option password '' option wifivariant '' option tipelogin '' option clientmac '' option gwid '' option wlanid '' option sessionid '' option serverid '' option cpcprovider '' Misal:\nconfig autologin option multi_autologin '0' option loadbalance 'no' option username 'halo@kopijahe.my.id' option password '3nakb4nget' option wifivariant 'smartbisnis' option tipelogin 'login' option gwid 'FFF-FF-FFF' option clientmac 'ff:ff:ff:ff:ff:ff' option wlanid 'FFFFFFFFF/FFFFFFFFFFF:@wifi.id' option sessionid 'FFF-FF-00000000000000000000000000' option serverid 'welcome2.wifi.id' option cpcprovider 'kopijahe' Atau jika digunakan untuk load-balance:\nconfig autologin option multi_autologin '0' option loadbalance 'yes' option waninterface 'wwan' option username 'halo@kopijahe.my.id' option password '3nakb4nget' option wifivariant 'smartbisnis' option tipelogin 'login' option gwid 'FFF-FF-FFF' option clientmac 'ff:ff:ff:ff:ff:ff' option wlanid 'FFFFFFFFF/FFFFFFFFFFF:@wifi.id' option sessionid 'FFF-FF-00000000000000000000000000' option serverid 'welcome2.wifi.id' option cpcprovider 'kopijahe' config autologin option multi_autologin '1' option loadbalance 'yes' option waninterface 'wwan2' option username 'hola@kopijahe.my.id' option password 'n1kmatb4nget' option wifivariant 'smartbisnis' option tipelogin 'login' option gwid 'FFF-FF-FFF' option clientmac 'ff:ff:ff:ff:ff:ff' option wlanid 'FFFFFFFFF/FFFFFFFFFFF:@wifi.id' option sessionid 'FFF-FF-11111111111111111111111111' option serverid 'welcome2.wifi.id' option cpcprovider 'kopijahe'  Kirim dukungan donasi melalui:  \n","wordCount":"826","inLanguage":"en","datePublished":"2020-12-13T07:25:16+07:00","dateModified":"2020-12-13T07:25:16+07:00","author":{"@type":"Person","name":"KopiJahe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.kopijahe.my.id/posts/man-autologin-kopijahe/"},"publisher":{"@type":"Organization","name":"Blog KopiJahe","logo":{"@type":"ImageObject","url":"https://blog.kopijahe.my.id/favicon.ico"}}}</script>
 </head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
+<body class=dark id=top>
+<script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -110,9 +110,9 @@ exit 0
 <h3 id=pembaruan-aplikasi-autologin>Pembaruan aplikasi autologin<a hidden class=anchor aria-hidden=true href=#pembaruan-aplikasi-autologin>#</a></h3>
 <p>Untuk memperbarui aplikasi autologin, cukup dengan perintah:</p>
 <pre tabindex=0><code>kopijahe -b
-</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-b-1.png alt>
+</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-b-1.png#center alt>
 </p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-b-2.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-b-2.png#center alt>
 </p>
 <hr>
 <h3 id=mode-autologin-via-tangkapan-curl>Mode autologin via tangkapan CURL<a hidden class=anchor aria-hidden=true href=#mode-autologin-via-tangkapan-curl>#</a></h3>
@@ -124,12 +124,12 @@ exit 0
 <ol>
 <li>
 <p>Koneksikan router dengan jaringan, buka halaman landing</p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-login.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-login.png#center alt>
 </p>
 </li>
 <li>
 <p>Tekan tombol <code>F12</code>, lalu masuk ke tab <code>Network</code> dan centang <code>Preserve log</code></p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-f12-network-preserve-log.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-f12-network-preserve-log.png#center alt>
 </p>
 </li>
 <li>
@@ -137,12 +137,12 @@ exit 0
 </li>
 <li>
 <p>Klik kanan barisnya, lalu pilih <code>Copy</code> -> <code>Copy as cURL (bash)</code></p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-copy-as-curl-bash.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-copy-as-curl-bash.png#center alt>
 </p>
 </li>
 <li>
 <p>Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)</p>
-<p><img loading=lazy src=../../img/autologin-single/02-putty.png alt=putty>
+<p><img loading=lazy src=../../img/autologin-single/02-putty.png#center alt=putty>
 </p>
 </li>
 <li>
@@ -152,33 +152,33 @@ exit 0
 <pre tabindex=0><code>vi &lt;nama berkas&gt;
 </code></pre><p>Misal:</p>
 <pre tabindex=0><code>vi /etc/login_file.txt
-</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt.png alt>
+</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt.png#center alt>
 </p>
 <ol start=7>
 <li>
 <p>Untuk memulai mode input, tekan tombol <code>i</code>, perhatikan indikator di bagian pojok bawah kiri, akan berubah dari <code>-</code> menjadi <code>I</code>:</p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-2.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-2.png#center alt>
 </p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-3.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-3.png#center alt>
 </p>
 </li>
 <li>
 <p>Paste hasil dari no. 4 dengan menggunakan klik kanan:</p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-4.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-4.png#center alt>
 </p>
 </li>
 <li>
 <p>Hapus baris <code>--compressed</code> dan akhiran <code> \</code> di berkas</p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-5.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-5.png#center alt>
 </p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-6.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-6.png#center alt>
 </p>
 </li>
 <li>
 <p>Untuk menyimpan perubahan berkas, tekan tombol <code>ESC</code>, diikuti dengan mengetikkan <code>:wq</code></p>
 </li>
 </ol>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-7.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-7.png#center alt>
 </p>
 <p>Contoh tampilan berkas <code>/etc/rc.local</code></p>
 <p>(misal untuk 1 koneksi dengan file)</p>
@@ -225,13 +225,13 @@ kopijahe -m 2 -c &quot;google&quot;
 <p>Jika deteksi otomatis halaman landing tidak berhasil di jaringan @wifi.id atau wms di daerah anda, anda bisa memasukkan secara manual URL halaman landing secara manual dengan menggunakan parameter <code>-d</code></p>
 <p>Seperti ini:</p>
 <pre tabindex=0><code>kopijahe -d
-</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-d-1.png alt>
+</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-d-1.png#center alt>
 </p>
 <p>Script akan menanyakan URL halaman landing yang akan digunakan:</p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-d-2.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-d-2.png#center alt>
 </p>
 <p>Silahkan paste URL dengan menggunakan klik kanan, lalu tekan <code>enter</code>:</p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-d-3.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/kopijahe-d-3.png#center alt>
 </p>
 <hr>
 <h3 id=pengaturan-manual-autologin>Pengaturan manual autologin<a hidden class=anchor aria-hidden=true href=#pengaturan-manual-autologin>#</a></h3>
@@ -297,9 +297,9 @@ config autologin
         option cpcprovider 'kopijahe'
 </code></pre><hr>
 <p><strong>Kirim dukungan donasi melalui:</strong>
-<a href=https://trakteer.id/kopijahe><img loading=lazy src=../../img/trakteer-button.png alt=trakteer>
+<a href=https://trakteer.id/kopijahe><img loading=lazy src=../../img/trakteer-button.png#center alt=trakteer>
 </a>
-<a href=https://saweria.co/kopijahe><img loading=lazy src=../../img/saweria-button.png alt=saweria>
+<a href=https://saweria.co/kopijahe><img loading=lazy src=../../img/saweria-button.png#center alt=saweria>
 </a></p>
 </div>
 <footer class=post-footer>

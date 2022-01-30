@@ -34,8 +34,8 @@
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://blog.kopijahe.my.id/posts/"},{"@type":"ListItem","position":3,"name":"Tutorial Multi Autologin Kopijahe","item":"https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/"}]}</script>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Tutorial Multi Autologin Kopijahe","name":"Tutorial Multi Autologin Kopijahe","description":"Setelah sebelumnya sudah memasang aplikasi autologin dan load-balancing 2 koneksi, pada artikel kali ini, saya akan memberikan langkah-langkah agar aplikasi autologin bisa berjalan di kedua koneksi (misal load-balancing 2 koneksi @wifi.id)\n","keywords":[],"articleBody":"Setelah sebelumnya sudah memasang aplikasi autologin dan load-balancing 2 koneksi, pada artikel kali ini, saya akan memberikan langkah-langkah agar aplikasi autologin bisa berjalan di kedua koneksi (misal load-balancing 2 koneksi @wifi.id)\nLangkah-langkah:   Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)\n  Jika mengikuti tutorial sebelumnya, berarti aplikasi autologin untuk koneksi pertama harus dirubah agar tetap berjalan dengan baik, dengan mengetikkan perintah\n  kopijahe -m 1 -l \"yes\"  Lalu konfirmasi interface yang digunakan untuk koneksi pertama (misalnya wwan)\n  Lalu masukkan pengaturan autologin untuk koneksi kedua dengan perintah\n  kopijahe -m 2 -l \"yes\" -u \"\" -p \"\" -v \"\" -c \"\" -a Keterangan tambahan:\n[*] parameter \"-m\" yang diikuti angka 2 menandakan bahwa ini pengaturan autologin kedua [*] parameter \"-l\" yang diikuti \"yes\" menandakan bahwa koneksi ini digunakan untuk load-balance [*] parameter \"-u\" diisi dengan username sesuai kode voucher/akun. Untuk akun kampus, tidak perlu diisi akhiran domain kampusnya (misal: 1111111@ut.ac.id, cukup diisi 1111111 saja) [*] parameter \"-p\" diisi dengan password/serial sesuai kode voucher/akun [*] parameter \"-v\" diisi dengan salah satu: \"wifi.id\", \"wms\", \"smartbisnis\", \"kampus\" (khusus kampus, diikuti dengan konfirmasi domain kampus, misal ut.ac.id) [*] parameter \"-c\" sifatnya opsional, diisi dengan salah satu: \"kopijahe\", \"firefox\", \"google\", \"microsoft\", \"apple\" (jika tidak diisi, maka akan dianggap menggunakan layanan dari kopijahe) [*] parameter \"-a\" harus berada di posisi paling belakang Jangan lupa konfirmasi interface yang digunakan untuk pengaturan kedua (misalnya wwan2, sesuai tutorial sebelumnya)\nUntuk melakukan proses login, bisa menggunakan perintah  kopijahe -m 2  Status login bisa dilihat melalui halaman System Log OpenWrt via browser (biasanya: 192.168.1.1) menggunakan kata kunci notice root\n  Agar proses autologin bisa berjalan meski router sempat mati atau jendela PuTTY ditutup, maka harus kita masukkan di berkas /etc/rc.local, untuk itu, kita kembali ke jendela PuTTY lagi, lalu tekan tombol Ctrl + C untuk menghentikan proses autologin yang sedang berjalan terlebih dahulu.\n  Lalu ketikkan perintah ini untuk membuka berkas /etc/rc.local\n  vi /etc/rc.local Tekan tombol i untuk memulai mode input, lalu rubah isi berkas /etc/rc.local dari  sleep 10 \u0026\u0026 kopijahe \u0026 exit 0 menjadi\nsleep 10 \u0026\u0026 kopijahe -m 1 \u0026 kopijahe -m 2 \u0026 exit 0 Untuk menyimpan perubahan berkas, tekan tombol ESC, diikuti dengan mengetikkan :wq  Matikan dulu semua proses autologin kopijahe yang berjalan di background menggunakan perintah  kopijahe -k Untuk menjalankan proses autologin kembali, bisa dicoba reboot router, atau cabut-pasang kabel daya router, atau menggunakan perintah:  sh /etc/rc.local Versi video dari tutorial ini:   Kirim dukungan donasi melalui:  \n","wordCount":"400","inLanguage":"en","datePublished":"2020-12-12T18:28:01+07:00","dateModified":"2020-12-12T18:28:01+07:00","author":{"@type":"Person","name":"KopiJahe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.kopijahe.my.id/posts/multi-autologin-kopijahe/"},"publisher":{"@type":"Organization","name":"Blog KopiJahe","logo":{"@type":"ImageObject","url":"https://blog.kopijahe.my.id/favicon.ico"}}}</script>
 </head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
+<body class=dark id=top>
+<script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -63,7 +63,7 @@ Tutorial Multi Autologin Kopijahe
 <ol>
 <li>
 <p>Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)</p>
-<p><img loading=lazy src=../../img/autologin-single/02-putty.png alt=putty>
+<p><img loading=lazy src=../../img/autologin-single/02-putty.png#center alt=putty>
 </p>
 </li>
 <li>
@@ -71,12 +71,12 @@ Tutorial Multi Autologin Kopijahe
 </li>
 </ol>
 <pre tabindex=0><code>kopijahe -m 1 -l &quot;yes&quot;
-</code></pre><p><img loading=lazy src=../../img/autologin-multi/01-kopijahe-m1-l-yes.png alt>
+</code></pre><p><img loading=lazy src=../../img/autologin-multi/01-kopijahe-m1-l-yes.png#center alt>
 </p>
 <ol start=3>
 <li>
 <p>Lalu konfirmasi interface yang digunakan untuk <strong>koneksi pertama</strong> (misalnya <code>wwan</code>)</p>
-<p><img loading=lazy src=../../img/autologin-multi/02-kopijahe-wwan.png alt>
+<p><img loading=lazy src=../../img/autologin-multi/02-kopijahe-wwan.png#center alt>
 </p>
 </li>
 <li>
@@ -92,26 +92,26 @@ Tutorial Multi Autologin Kopijahe
 [*] parameter &quot;-v&quot; diisi dengan salah satu: &quot;wifi.id&quot;, &quot;wms&quot;, &quot;smartbisnis&quot;, &quot;kampus&quot; (khusus kampus, diikuti dengan konfirmasi domain kampus, misal ut.ac.id)
 [*] parameter &quot;-c&quot; sifatnya opsional, diisi dengan salah satu: &quot;kopijahe&quot;, &quot;firefox&quot;, &quot;google&quot;, &quot;microsoft&quot;, &quot;apple&quot; (jika tidak diisi, maka akan dianggap menggunakan layanan dari kopijahe)
 [*] parameter &quot;-a&quot; harus berada di posisi paling belakang
-</code></pre><p><img loading=lazy src=../../img/autologin-multi/03-kopijahe-wwan2-a.png alt>
+</code></pre><p><img loading=lazy src=../../img/autologin-multi/03-kopijahe-wwan2-a.png#center alt>
 </p>
 <p>Jangan lupa konfirmasi interface yang digunakan untuk pengaturan kedua (misalnya <code>wwan2</code>, sesuai <a href=../openwrt-mwan3/>tutorial sebelumnya</a>)</p>
-<p><img loading=lazy src=../../img/autologin-multi/03-kopijahe-wwan2-a-2.png alt>
+<p><img loading=lazy src=../../img/autologin-multi/03-kopijahe-wwan2-a-2.png#center alt>
 </p>
 <ol start=5>
 <li>Untuk melakukan proses login, bisa menggunakan perintah</li>
 </ol>
 <pre tabindex=0><code>kopijahe -m 2
-</code></pre><p><img loading=lazy src=../../img/autologin-multi/04-kopijahe-m-2.png alt>
+</code></pre><p><img loading=lazy src=../../img/autologin-multi/04-kopijahe-m-2.png#center alt>
 </p>
 <ol start=6>
 <li>
 <p>Status login bisa dilihat melalui halaman <strong>System Log</strong> OpenWrt via browser (biasanya: <a href=http://192.168.1.1>192.168.1.1</a>) menggunakan kata kunci <code>notice root</code></p>
-<p><img loading=lazy src=../../img/autologin-multi/05-openwrt-system-log-notice-root.png alt>
+<p><img loading=lazy src=../../img/autologin-multi/05-openwrt-system-log-notice-root.png#center alt>
 </p>
 </li>
 <li>
 <p>Agar proses autologin bisa berjalan meski router sempat mati atau jendela PuTTY ditutup, maka harus kita masukkan di berkas <code>/etc/rc.local</code>, untuk itu, kita kembali ke jendela PuTTY lagi, lalu tekan tombol <code>Ctrl + C</code> untuk menghentikan proses autologin yang sedang berjalan terlebih dahulu.</p>
-<p><img loading=lazy src=../../img/autologin-multi/06-kopijahe-ctrl-c.png alt>
+<p><img loading=lazy src=../../img/autologin-multi/06-kopijahe-ctrl-c.png#center alt>
 </p>
 </li>
 <li>
@@ -119,7 +119,7 @@ Tutorial Multi Autologin Kopijahe
 </li>
 </ol>
 <pre tabindex=0><code>vi /etc/rc.local
-</code></pre><p><img loading=lazy src=../../img/autologin-multi/07-vi-etc-rc-local.png alt>
+</code></pre><p><img loading=lazy src=../../img/autologin-multi/07-vi-etc-rc-local.png#center alt>
 </p>
 <ol start=9>
 <li>Tekan tombol <code>i</code> untuk memulai mode input, lalu rubah isi berkas <code>/etc/rc.local</code> dari</li>
@@ -132,35 +132,35 @@ exit 0
 kopijahe -m 1 &amp;
 kopijahe -m 2 &amp;
 exit 0
-</code></pre><p><img loading=lazy src=../../img/autologin-multi/07-vi-etc-rc-local-2.png alt>
+</code></pre><p><img loading=lazy src=../../img/autologin-multi/07-vi-etc-rc-local-2.png#center alt>
 </p>
 <ol start=10>
 <li>Untuk menyimpan perubahan berkas, tekan tombol <code>ESC</code>, diikuti dengan mengetikkan <code>:wq</code></li>
 </ol>
-<p><img loading=lazy src=../../img/autologin-multi/07-vi-etc-rc-local-3.png alt>
+<p><img loading=lazy src=../../img/autologin-multi/07-vi-etc-rc-local-3.png#center alt>
 </p>
 <ol start=11>
 <li>Matikan dulu semua proses autologin kopijahe yang berjalan di background menggunakan perintah</li>
 </ol>
 <pre tabindex=0><code>kopijahe -k
-</code></pre><p><img loading=lazy src=../../img/autologin-multi/08-kopijahe-k.png alt>
+</code></pre><p><img loading=lazy src=../../img/autologin-multi/08-kopijahe-k.png#center alt>
 </p>
-<p><img loading=lazy src=../../img/autologin-multi/08-kopijahe-k-2.png alt>
+<p><img loading=lazy src=../../img/autologin-multi/08-kopijahe-k-2.png#center alt>
 </p>
 <ol start=12>
 <li>Untuk menjalankan proses autologin kembali, bisa dicoba reboot router, atau cabut-pasang kabel daya router, atau menggunakan perintah:</li>
 </ol>
 <pre tabindex=0><code>sh /etc/rc.local
-</code></pre><p><img loading=lazy src=../../img/autologin-multi/09-sh-etc-rc-local.png alt>
+</code></pre><p><img loading=lazy src=../../img/autologin-multi/09-sh-etc-rc-local.png#center alt>
 </p>
 <h3 id=versi-video-dari-tutorial-ini>Versi video dari tutorial ini:<a hidden class=anchor aria-hidden=true href=#versi-video-dari-tutorial-ini>#</a></h3>
 <div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
 <iframe src=https://www.youtube.com/embed/TayhtV17ZJ0 style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
 </div>
 <h3 id=kirim-dukungan-donasi-melalui>Kirim dukungan donasi melalui:<a hidden class=anchor aria-hidden=true href=#kirim-dukungan-donasi-melalui>#</a></h3>
-<p><a href=https://trakteer.id/kopijahe><img loading=lazy src=../../img/trakteer-button.png alt=trakteer>
+<p><a href=https://trakteer.id/kopijahe><img loading=lazy src=../../img/trakteer-button.png#center alt=trakteer>
 </a>
-<a href=https://saweria.co/kopijahe><img loading=lazy src=../../img/saweria-button.png alt=saweria>
+<a href=https://saweria.co/kopijahe><img loading=lazy src=../../img/saweria-button.png#center alt=saweria>
 </a></p>
 </div>
 <footer class=post-footer>

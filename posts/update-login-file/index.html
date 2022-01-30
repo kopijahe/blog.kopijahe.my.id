@@ -34,8 +34,8 @@
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://blog.kopijahe.my.id/posts/"},{"@type":"ListItem","position":3,"name":"Tutorial Pembaruan Berkas Autologin","item":"https://blog.kopijahe.my.id/posts/update-login-file/"}]}</script>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Tutorial Pembaruan Berkas Autologin","name":"Tutorial Pembaruan Berkas Autologin","description":"","keywords":[],"articleBody":"Jika menggunakan script autologin, autologin v2 atau kopijahe (dengan menggunakan parameter -f ), dan ingin mengganti akun yang digunakan, berikut adalah langkah-langkah yang diperlukan:\n Buka PuTTY, koneksikan perangkat (PC/laptop) ke router melalui SSH (biasanya 192.168.1.1)  Ketikkan perintah berikut, sesuaikan dengan script yang anda gunakan:     Varian autologin Perintah     autologin/autologin-v2 `pgrep -f autologin   KopiJahe kopijahe -k     Jika masih dalam posisi terkoneksi dengan internet (masih login), silahkan logout dulu.\n  Buka halaman login\n  Tekan tombol F12, lalu masuk ke tab Network dan centang Preserve log\n  Lakukan login seperti biasa, lalu cari baris check_login.php atau quarantine.php (misal untuk jaringan @wifi.id, wms dan turunannya, sesuaikan dengan jaringan anda)\n  Klik kanan barisnya, lalu pilih Copy - Copy as cURL (bash)\n  Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)\n  Hapus berkas login lama dengan menggunakan perintah\n  rm Misal:\nrm /etc/login_file.txt Ketikkan perintah berikut untuk membuat berkas baru yang akan digunakan untuk proses autologin:  vi Misal:\nvi /etc/login_file.txt Untuk memulai mode input, tekan tombol i, perhatikan indikator di bagian pojok bawah kiri, akan berubah dari - menjadi I:  Paste hasil dari no. 4 dengan menggunakan klik kanan:  Hapus baris --compressed dan akhiran  \\ di berkas  Untuk menyimpan perubahan berkas, tekan tombol ESC, diikuti dengan mengetikkan :wq  Proses autologin bisa dijalankan kembali, bisa dengan cara reboot router, cabut-pasang kabel power, atau dengan perintah:  sh /etc/rc.local Kirim dukungan donasi melalui:  \n","wordCount":"224","inLanguage":"en","datePublished":"2020-12-18T08:42:35+07:00","dateModified":"2020-12-18T08:42:35+07:00","author":{"@type":"Person","name":"KopiJahe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.kopijahe.my.id/posts/update-login-file/"},"publisher":{"@type":"Organization","name":"Blog KopiJahe","logo":{"@type":"ImageObject","url":"https://blog.kopijahe.my.id/favicon.ico"}}}</script>
 </head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
+<body class=dark id=top>
+<script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -62,7 +62,7 @@ Tutorial Pembaruan Berkas Autologin
 <ol>
 <li>Buka PuTTY, koneksikan perangkat (PC/laptop) ke router melalui SSH (biasanya <code>192.168.1.1</code>)</li>
 </ol>
-<p><img loading=lazy src=../../img/snapshot-connect/1-ssh-connect.png alt=login>
+<p><img loading=lazy src=../../img/snapshot-connect/1-ssh-connect.png#center alt=login>
 </p>
 <ol start=2>
 <li>Ketikkan perintah berikut, sesuaikan dengan script yang anda gunakan:</li>
@@ -91,12 +91,12 @@ Tutorial Pembaruan Berkas Autologin
 </li>
 <li>
 <p>Buka halaman login</p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-login.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-login.png#center alt>
 </p>
 </li>
 <li>
 <p>Tekan tombol <code>F12</code>, lalu masuk ke tab <code>Network</code> dan centang <code>Preserve log</code></p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-f12-network-preserve-log.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-f12-network-preserve-log.png#center alt>
 </p>
 </li>
 <li>
@@ -104,12 +104,12 @@ Tutorial Pembaruan Berkas Autologin
 </li>
 <li>
 <p>Klik kanan barisnya, lalu pilih <code>Copy</code> -> <code>Copy as cURL (bash)</code></p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-copy-as-curl-bash.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-copy-as-curl-bash.png#center alt>
 </p>
 </li>
 <li>
 <p>Buka koneksi SSH ke router menggunakan PuTTY (biasanya: 192.168.1.1)</p>
-<p><img loading=lazy src=../../img/autologin-single/02-putty.png alt=putty>
+<p><img loading=lazy src=../../img/autologin-single/02-putty.png#center alt=putty>
 </p>
 </li>
 <li>
@@ -119,7 +119,7 @@ Tutorial Pembaruan Berkas Autologin
 <pre tabindex=0><code>rm &lt;nama file&gt;
 </code></pre><p>Misal:</p>
 <pre tabindex=0><code>rm /etc/login_file.txt
-</code></pre><p><img loading=lazy src=../../img/update-login-file/rm-etc-login-file-txt.png alt>
+</code></pre><p><img loading=lazy src=../../img/update-login-file/rm-etc-login-file-txt.png#center alt>
 </p>
 <ol start=10>
 <li>Ketikkan perintah berikut untuk membuat berkas baru yang akan digunakan untuk proses autologin:</li>
@@ -127,40 +127,40 @@ Tutorial Pembaruan Berkas Autologin
 <pre tabindex=0><code>vi &lt;nama berkas&gt;
 </code></pre><p>Misal:</p>
 <pre tabindex=0><code>vi /etc/login_file.txt
-</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt.png alt>
+</code></pre><p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt.png#center alt>
 </p>
 <ol start=11>
 <li>Untuk memulai mode input, tekan tombol <code>i</code>, perhatikan indikator di bagian pojok bawah kiri, akan berubah dari <code>-</code> menjadi <code>I</code>:</li>
 </ol>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-2.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-2.png#center alt>
 </p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-3.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-3.png#center alt>
 </p>
 <ol start=12>
 <li>Paste hasil dari no. 4 dengan menggunakan klik kanan:</li>
 </ol>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-4.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-4.png#center alt>
 </p>
 <ol start=13>
 <li>Hapus baris <code>--compressed</code> dan akhiran <code> \</code> di berkas</li>
 </ol>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-5.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-5.png#center alt>
 </p>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-6.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-6.png#center alt>
 </p>
 <ol start=14>
 <li>Untuk menyimpan perubahan berkas, tekan tombol <code>ESC</code>, diikuti dengan mengetikkan <code>:wq</code></li>
 </ol>
-<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-7.png alt>
+<p><img loading=lazy src=../../img/man-autologin-kopijahe/filelogin-vi-etc-login-file-txt-7.png#center alt>
 </p>
 <ol start=15>
 <li>Proses autologin bisa dijalankan kembali, bisa dengan cara reboot router, cabut-pasang kabel power, atau dengan perintah:</li>
 </ol>
 <pre tabindex=0><code>sh /etc/rc.local
 </code></pre><h3 id=kirim-dukungan-donasi-melalui>Kirim dukungan donasi melalui:<a hidden class=anchor aria-hidden=true href=#kirim-dukungan-donasi-melalui>#</a></h3>
-<p><a href=https://trakteer.id/kopijahe><img loading=lazy src=../../img/trakteer-button.png alt=trakteer>
+<p><a href=https://trakteer.id/kopijahe><img loading=lazy src=../../img/trakteer-button.png#center alt=trakteer>
 </a>
-<a href=https://saweria.co/kopijahe><img loading=lazy src=../../img/saweria-button.png alt=saweria>
+<a href=https://saweria.co/kopijahe><img loading=lazy src=../../img/saweria-button.png#center alt=saweria>
 </a></p>
 </div>
 <footer class=post-footer>
