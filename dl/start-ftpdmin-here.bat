@@ -1,0 +1,4 @@
+@echo off
+
+ftpdmin .\
+exit
